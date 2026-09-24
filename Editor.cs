@@ -11,6 +11,7 @@ namespace EditorHTML
             Console.WriteLine("--MODO EDITOR--");
             Console.WriteLine("---------------");
             Start();
+            
         }
 
         public static void Start()
@@ -23,6 +24,7 @@ namespace EditorHTML
                 file.Append(Environment.NewLine);
             }while(Console.ReadKey().Key != ConsoleKey.Escape);
             Save(file);
+            Viewer.Show(file.ToString());
 
         }
         public static void Save(StringBuilder file)
